@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Tom",
+    "email": "tom@test.com",
+    "password": "1234",
+    "age": "21"
+  },
+  {
+    "name": "Mike",
+    "email": "Mike@test.com",
+    "password": "1234",
+    "age": "22"
+  },
+  {
+    "name": "Chad",
+    "email": "notchad@test.com",
+    "password": "1234",
+    "age": "25"
+  },
+  {
+    "name": "Karen",
+    "email": "Karen@test.com",
+    "password": "1234",
+    "age": "21"
+  },
+  {
+    "name": "Jeff",
+    "email": "yesjeff@test.com",
+    "password": "1234",
+    "age": "24"
+  }
+]
