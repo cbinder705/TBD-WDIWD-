@@ -1,4 +1,4 @@
-const { Model, DataTypes } = require("sequelize");
+const { Sequelize, Model, DataTypes } = require("sequelize");
 const sequelize = require("../config/connection");
 
 class Event extends Model {}
@@ -24,8 +24,9 @@ Event.init(
       defaultValue: DataTypes.NOW,
     },
     time: {
-      type: DataTypes.NOW,
+      type: DataTypes.TIME,
       allowNull: false,
+      defaultValue: DataTypes.NOW,
     },
     user_id: {
       type: DataTypes.INTEGER,
@@ -37,8 +38,10 @@ Event.init(
   },
   {
     sequelize,
+    freezeTableName: true,
+    timestamps: false,
     underscored: true,
-    modelName: "events",
+    modelName: "event",
   }
 );
 
