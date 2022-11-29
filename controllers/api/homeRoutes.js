@@ -8,17 +8,18 @@ router.get("/", async (req, res) => {
       include: [
         {
           model: User,
-          attributes: ["name"],
+          Event,
+          attributes: ["name", "description", "date", "time"],
         },
       ],
     });
 
     // Serialize data so the template can read it
-    const projects = projectData.map((project) => project.get({ plain: true }));
+    const events = EventData.map((event) => event.get({ plain: true }));
 
     // Pass serialized data and session flag into template
     res.render("homepage", {
-      projects,
+      events,
       logged_in: req.session.logged_in,
     });
   } catch (err) {
@@ -75,7 +76,7 @@ router.get("/login", (req, res) => {
     return;
   }
 
-  res.render("login");
+  res.render("login", { layout: "main.handlebars" });
 });
 
 module.exports = router;
