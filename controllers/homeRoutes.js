@@ -1,14 +1,13 @@
 const router = require("express").Router();
-const { Event, User } = require("../../models");
-const withAuth = require("./../../utils/auth");
+const { Event, User } = require("../models");
+const withAuth = require("../utils/auth");
 
-router.get("/", async (req, res) => {
+router.get("/events", async (req, res) => {
   try {
     const EventData = await Event.findAll({
       include: [
         {
-          model: User,
-          Event,
+          model: Event,
           attributes: ["name", "description", "date", "time"],
         },
       ],
@@ -18,7 +17,7 @@ router.get("/", async (req, res) => {
     const events = EventData.map((event) => event.get({ plain: true }));
 
     // Pass serialized data and session flag into template
-    res.render("homepage", {
+    res.render("events", {
       events,
       logged_in: req.session.logged_in,
     });
@@ -27,21 +26,21 @@ router.get("/", async (req, res) => {
   }
 });
 
-router.get("/event/:id", async (req, res) => {
+router.get("/users/:id", async (req, res) => {
   try {
-    const EventData = await Event.findByPk(req.params.id, {
+    const UserData = await User.findByPk(req.params.id, {
       include: [
         {
           model: User,
-          attributes: ["name"],
+          attributes: ["name", "email", "password", "age"],
         },
       ],
     });
 
-    const event = EventData.get({ plain: true });
+    const users = UserData.get({ plain: true });
 
-    res.render("event", {
-      ...event,
+    res.render(users, {
+      ...user,
       logged_in: req.session.logged_in,
     });
   } catch (err) {
@@ -55,7 +54,7 @@ router.get("/profile", withAuth, async (req, res) => {
     // Find the logged in user based on the session ID
     const userData = await User.findByPk(req.session.user_id, {
       attributes: { exclude: ["password"] },
-      include: [{ model: Project }],
+      include: [{ model: User }],
     });
 
     const user = userData.get({ plain: true });
