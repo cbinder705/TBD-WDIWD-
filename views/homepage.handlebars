@@ -1,5 +1,6 @@
 <!-- Loop over each object in the projects array -->
 {{#each events as |event|}}
+<link rel = "stylesheet" href=> </link>
   <div class="row mb-4 project">
     <div class="col-md-5">
       <h2>
@@ -8,7 +9,10 @@
         <a href="/event/{{event.id}}">{{event.name}}</a>
       </h2>
       <p>
-        {{event.date}}
+        {{event.date}}   {{event.time}}
+      </p>
+        <p>
+        {{event.location}}
       </p>
       <p>Organized by
         {{user.name}}

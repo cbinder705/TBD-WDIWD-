@@ -22,7 +22,7 @@ Event.init(
       type: DataTypes.STRING,
     },
     date: {
-      type: DataTypes.DATE,
+      type: DataTypes.DATEONLY,
       allowNull: false,
       defaultValue: DataTypes.NOW,
     },
