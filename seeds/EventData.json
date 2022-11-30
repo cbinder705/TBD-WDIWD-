@@ -3,48 +3,56 @@
     "name": "testevent1",
     "description": "an imaginary event",
     "date": "11/21/2022",
-    "time": ""
+    "time": "",
+    "location": ""
   },
   {
     "name": "testevent2",
     "description": "an imaginary event",
     "date": "11/21/2022",
-    "time": ""
+    "time": "",
+    "location": ""
   },
   {
     "name": "testevent3",
     "description": "an imaginary event",
     "date": "11/21/2022",
-    "time": ""
+    "time": "",
+    "location": ""
   },
   {
     "name": "testevent4",
     "description": "an imaginary event",
     "date": "11/21/2022",
-    "time": ""
+    "time": "",
+    "location": ""
   },
   {
     "name": "testevent5",
     "description": "an imaginary event",
     "date": "11/21/2022",
-    "time": ""
+    "time": "",
+    "location": ""
   },
   {
     "name": "testevent6",
     "description": "an imaginary event",
     "date": "11/21/2022",
-    "time": ""
+    "time": "",
+    "location": ""
   },
   {
     "name": "testevent7",
     "description": "an imaginary event",
     "date": "11/21/2022",
-    "time": ""
+    "time": "",
+    "location": ""
   },
   {
     "name": "testevent8",
     "description": "an imaginary event",
     "date": "11/21/2022",
-    "time": ""
+    "time": "",
+    "location": ""
   }
 ]
