@@ -18,7 +18,7 @@ Event.init(
     description: {
       type: DataTypes.STRING,
     },
-    Location: {
+    location: {
       type: DataTypes.STRING,
     },
     date: {

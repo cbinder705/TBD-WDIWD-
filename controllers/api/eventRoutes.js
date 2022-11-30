@@ -1,23 +1,38 @@
 const router = require("express").Router();
-const { Event, User } = require("../../models");
+const { Event } = require("../../models");
 const withAuth = require("../../utils/auth");
 
-router.get("/", async (req, res) => {
-  // Find the logged in user based on the session ID
-  const userData = await Event.findAll({
-    include: [
-      {
-        model: User,
-        attributes: ["name", "id", "email", "age"],
+router.post("/", withAuth, async (req, res) => {
+  try {
+    const newEvent = await Event.create({
+      ...req.body,
+      user_id: req.session.user_id,
+    });
+
+    res.status(200).json(newEvent);
+  } catch (err) {
+    res.status(400).json(err);
+  }
+});
+
+router.delete("/:id", withAuth, async (req, res) => {
+  try {
+    const EventData = await Event.destroy({
+      where: {
+        name: req.params.name,
+        user_id: req.session.user_id,
       },
-    ],
-  });
+    });
 
-  //const users = userData.map((project) => project.get({ plain: true }));
-  const users = await userData.map((event) => event.get({ plain: true }));
+    if (!EventData) {
+      res.status(404).json({ message: "No event found with this name!" });
+      return;
+    }
 
-  console.log(17, users);
-  res.json(users);
+    res.status(200).json(EventData);
+  } catch (err) {
+    res.status(500).json(err);
+  }
 });
 
 module.exports = router;

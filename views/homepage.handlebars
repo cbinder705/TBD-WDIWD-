@@ -5,24 +5,20 @@
       <h2>
         <!-- Call helper function with triple brackets to render the emoji span as HTML -->
 
-        <a href="/project/{{event.id}}">{{event.name}}</a>
+        <a href="/event/{{event.id}}">{{event.name}}</a>
       </h2>
       <p>
         <span for="img" aria-label="money">💲</span>
-        <!-- Pass needed_funding value to the helper function -->
-        <span class="dollar-amount">{{format_amount
-            project.needed_funding
-          }}</span>
         needed!
       </p>
       <p>Created by
-        {{project.user.name}}
+        {{user.name}}
         on
-        {{format_date project.date_created}}</p>
+       
     </div>
     <div class="col-md-7">
       <p>
-        {{project.description}}
+        {{event.description}}
       </p>
     </div>
   </div>
