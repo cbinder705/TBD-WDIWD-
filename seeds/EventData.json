@@ -1,24 +1,24 @@
 [
   {
-    "name": "testevent1",
-    "description": "an imaginary event",
-    "date": "11/21/2022",
-    "time": "",
-    "location": "a"
+    "name": "Mikes 30th Birthday Party",
+    "description": "come out and celebrate the big 3 0 for my friend Mike, all are welcome",
+    "date": "12/21/2022",
+    "time": "18:00",
+    "location": "Xfinity Live"
   },
   {
-    "name": "testevent2",
-    "description": "an imaginary event",
-    "date": "11/21/2022",
-    "time": "",
-    "location": "a"
+    "name": "Mystery Book Club",
+    "description": "a book club for those who are interested in reading books related to crime-solving and mysteries. No nooks allowed.",
+    "date": "12/1/2022",
+    "time": "13:00",
+    "location": "135 DefinitelyaRealStreet Ave"
   },
   {
-    "name": "testevent3",
-    "description": "an imaginary event",
-    "date": "11/21/2022",
-    "time": "",
-    "location": "a"
+    "name": "Coding BootCamp Shouting Club",
+    "description": "we code, we scream, we feel better",
+    "date": "12/18/2022",
+    "time": "12:00",
+    "location": "Rutgers BootCamp Slack Server"
   },
   {
     "name": "testevent4",
