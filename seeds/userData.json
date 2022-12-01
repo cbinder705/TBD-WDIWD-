@@ -2,31 +2,37 @@
   {
     "name": "Tommy Fischer",
     "email": "tom@test.com",
-    "password": "1234",
+    "password": "1534",
     "age": "21"
   },
   {
-    "name": "Mike",
+    "name": "Mike Brown",
     "email": "Mike@test.com",
     "password": "1234",
     "age": "22"
   },
   {
-    "name": "Chad",
+    "name": "Chad Livingston",
     "email": "notchad@test.com",
-    "password": "1234",
+    "password": "1734",
     "age": "25"
   },
   {
-    "name": "Karen",
+    "name": "Karen Coolings",
     "email": "Karen@test.com",
-    "password": "1234",
+    "password": "1233",
     "age": "21"
   },
   {
-    "name": "Jeff",
+    "name": "Jeffery Goatenson",
     "email": "yesjeff@test.com",
-    "password": "1234",
-    "age": "24"
+    "password": "0976",
+    "age": "26"
+  },
+  {
+    "name": "John Goodman",
+    "email": "JG@test.com",
+    "password": "0971",
+    "age": "45"
   }
 ]
