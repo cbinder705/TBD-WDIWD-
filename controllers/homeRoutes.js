@@ -9,35 +9,34 @@ router.get("/", async (req, res) => {
         {
           model: User,
           attributes: ["name"],
-          // attributes: ["name", "description", "date", "time", "location"],
+          //attributes: ["name", "description", "date", "time", "location"],
         },
       ],
     });
-    const events = EventData.map((event) => event.get({ plain: true }));
-    res.render("homepage", {
-      events,
-      logged_in: req.session.logged_in,
-    });
+ 
+    res.render("login", { layout: "login.handlebars" });
+    
   } catch (err) {
     res.status(500).json(err);
   }
 });
 
-router.get("/users/:id", async (req, res) => {
+router.get("/event/:id", async (req, res) => {
   try {
-    const UserData = await User.findByPk(req.params.id, {
+    const EventData = await Event.findAll({
       include: [
         {
           model: User,
-          attributes: ["name", "email", "password", "age"],
+          attributes: ["name"],
+          //attributes: ["name", "description", "date", "time", "location"],
         },
       ],
     });
 
-    const users = UserData.get({ plain: true });
+    const events = EventData.map((event) => event.get({ plain: true }));
 
-    res.render(users, {
-      ...user,
+    res.render("event", {
+      events,
       logged_in: req.session.logged_in,
     });
   } catch (err) {
@@ -72,7 +71,7 @@ router.get("/login", (req, res) => {
     return;
   }
 
-  res.render("login", { layout: "main.handlebars" });
+  res.render("login", { layout: "login.handlebars" });
 });
 
 module.exports = router;

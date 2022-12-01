@@ -3,6 +3,6 @@ const userRoutes = require("./userRoutes");
 const eventRoutes = require("./eventRoutes");
 
 router.use("/users", userRoutes);
-router.use("/events", eventRoutes);
+router.use("/event", eventRoutes);
 
 module.exports = router;
