@@ -13,9 +13,8 @@ router.get("/", async (req, res) => {
         },
       ],
     });
- 
-    res.render("login", { layout: "login.handlebars" });
-    
+
+    res.render("login", { layout: "main.handlebars" });
   } catch (err) {
     res.status(500).json(err);
   }
