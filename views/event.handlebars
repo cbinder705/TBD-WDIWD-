@@ -1,13 +1,13 @@
 
-
+{{#each events as |event|}}
 <div class="cards">
   <h2>
-  <a href="./api/event/{{event.id}}">{{event.name}}</a>
+  {{name}}
   </h2>
-  <p>{{event.description}}</p>
-  <p>{{ format_date event.date}}test</p>
+  <p>{{description}}</p>
+  <p>{{date}}</p>
   <p>{{time}}</p>
-   <p>{{location}}test</p>
+   <p>{{location}}</p>
 
   
   </p>
@@ -15,3 +15,4 @@
     <button class="btn btn-primary">Attend this Event!</button>
   </p>
 </div>
+{{/each}}
