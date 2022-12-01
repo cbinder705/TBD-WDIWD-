@@ -9,7 +9,7 @@
         <a href="/event/{{event.id}}">{{event.name}}</a>
       </h2>
       <p>
-        {{event.date}}   {{event.time}}
+        {{ format_date event.date}}   {{event.time}}
       </p>
         <p>
         {{event.location}}
