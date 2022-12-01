@@ -1,3 +1,9 @@
-p {
-  font-family: "Times New Roman", Times, serif;
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color:#8fbc8f ;
 }
