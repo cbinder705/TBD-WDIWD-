@@ -30,7 +30,8 @@ User.init(
     },
     age: {
       type: DataTypes.INTEGER,
-      allowNull: false,
+      allowNull: true,
+      defaultValue: 0,
     },
     password: {
       type: DataTypes.STRING,

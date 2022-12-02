@@ -1,8 +1,10 @@
 const router = require("express").Router();
 const { User } = require("../../models");
 
-router.post("/api/users", async (req, res) => {
+router.post("/", async (req, res) => {
   try {
+
+    console.log(req.body);
     const userData = await User.create(req.body);
 
     req.session.save(() => {
@@ -12,6 +14,7 @@ router.post("/api/users", async (req, res) => {
       res.status(200).json(userData);
     });
   } catch (err) {
+    console.error(err);
     res.status(400).json(err);
   }
 });
