@@ -3,11 +3,14 @@
   padding: 0;
   margin: 0;
 }
-
+a {
+  display: none;
+}
 body {
-  background-color: aquamarine;
+  background-color: rgb(161, 238, 212);
   background-size: cover;
-  background-image: url(images/eventimage.jpeg);
+
+  opacity: 90%;
 }
 
 h2 {
@@ -18,15 +21,6 @@ h2 {
   font-size: xx-large;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   text-decoration-line: underline;
-}
-
-a {
-  display: none;
-}
-
-.header {
-  padding-left: 1rem;
-  text-align: center;
 }
 
 .form-group {
