@@ -25,7 +25,7 @@ router.delete("/:id", withAuth, async (req, res) => {
     });
 
     if (!EventData) {
-      res.status(404).json({ message: "No event found with this name!" });
+      res.status(404).json({ message: "Nothing to delete!" });
       return;
     }
 
