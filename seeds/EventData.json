@@ -1,21 +1,21 @@
 [
   {
     "name": "Mikes 30th Birthday Party",
-    "description": "come out and celebrate the big 3 0 for my friend Mike, all are welcome",
+    "description": "Come out and celebrate the big 3 0 for my friend Mike, all are welcome!",
     "date": "12/21/2022",
     "time": "18:00",
     "location": "Xfinity Live"
   },
   {
     "name": "Mystery Book Club",
-    "description": "a book club for those who are interested in reading books related to crime-solving and mysteries. No nooks allowed.",
+    "description": "A book club for those who are interested in reading books related to crime-solving and mysteries. No nooks allowed.",
     "date": "12/1/2022",
     "time": "13:00",
-    "location": "135 DefinitelyaRealStreet Ave"
+    "location": "To Be Announced"
   },
   {
     "name": "Coding BootCamp Venting Club",
-    "description": "we code, we vent, we feel better",
+    "description": "We code, we vent, we feel better",
     "date": "12/18/2022",
     "time": "12:00",
     "location": "Rutgers BootCamp Slack Server"
