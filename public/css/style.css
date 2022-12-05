@@ -3,14 +3,27 @@
   padding: 0;
   margin: 0;
 }
+header {
+  padding: 1rem;
+  margin-left: 1rem;
+  text-align: center;
+  font-style: oblique;
+  font-size: 60px;
+  font-family: "Times New Roman", Times, serif;
+}
+
 a {
   display: none;
 }
 body {
   background-color: rgb(161, 238, 212);
   background-size: cover;
-
-  opacity: 90%;
+  background-image: linear-gradient(
+    to right,
+    rgba(255, 245, 245, 0),
+    rgb(94, 179, 132)
+  );
+  opacity: 80%;
 }
 
 h2 {
@@ -59,6 +72,8 @@ h3 {
 
 p {
   font-size: 20px;
+  font-family: "Times New Roman", Times, serif;
+  padding: 10px;
 }
 
 button {
@@ -66,6 +81,7 @@ button {
   font-weight: bold;
   background-color: lightgreen;
   border-radius: 10px;
+  padding: 4px;
 }
 
 label {
