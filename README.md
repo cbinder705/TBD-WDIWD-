@@ -40,7 +40,7 @@ This application allows users to not only find something to do with their free t
 
 # Dependencies
 
-What Do I Want To Do? uses NodeJs, Handlebars, CSS, Vanilla Javascript, Sequelize, Express, bCrypt and many other technologies to maintain its usage and accessibility.
+What Do I Want To Do? uses NodeJs, Handlebars, CSS, Vanilla Javascript, Sequelize, Express, bCrypt and many other technologies to maintain its usage and accessibility..
 
 # Screenshot
 
