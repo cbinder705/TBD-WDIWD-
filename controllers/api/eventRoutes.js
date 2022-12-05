@@ -15,11 +15,29 @@ router.post("/", withAuth, async (req, res) => {
   }
 });
 
-router.delete("/:id", withAuth, async (req, res) => {
+router.get("/attend/:id", async (req, res) => {
+  try {
+    let result = await doThing();
+    console.log(results);
+  } catch (err) {
+    console.log(err);
+  }
+
+  /*
+  // old promise thenables
+  doThing()
+    .then(() => {})
+    .then(() => {})
+    .then(() => {})
+    .catch(() => {})
+  */
+});
+// links use GET requests
+router.get("/delete/:id", withAuth, async (req, res) => {
   try {
     const EventData = await Event.destroy({
       where: {
-        name: req.params.name,
+        id: req.params.id,
         user_id: req.session.user_id,
       },
     });

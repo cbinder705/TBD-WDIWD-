@@ -1,9 +1,11 @@
 const router = require("express").Router();
 const { User } = require("../../models");
-
+//! never use a slash route in your api (except for get requests)
+// GET api/orders/   - get all orders
+//! POST api/orders/
+// GET api/orders/:id
 router.post("/", async (req, res) => {
   try {
-
     console.log(req.body);
     const userData = await User.create(req.body);
 
