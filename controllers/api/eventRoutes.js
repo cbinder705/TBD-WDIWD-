@@ -15,24 +15,24 @@ router.post("/", withAuth, async (req, res) => {
   }
 });
 
-router.delete("/:id", withAuth, async (req, res) => {
-  try {
-    const EventData = await Event.destroy({
-      where: {
-        name: req.params.name,
-        user_id: req.session.user_id,
-      },
-    });
+// router.delete("/:id", withAuth, async (req, res) => {
+//   try {
+//     const EventData = await Event.destroy({
+//       where: {
+//         name: req.params.name,
+//         user_id: req.session.user_id,
+//       },
+//     });
 
-    if (!EventData) {
-      res.status(404).json({ message: "Nothing to delete!" });
-      return;
-    }
+//     if (!EventData) {
+//       res.status(404).json({ message: "Nothing to delete!" });
+//       return;
+//     }
 
-    res.status(200).json(EventData);
-  } catch (err) {
-    res.status(500).json(err);
-  }
-});
+//     res.status(200).json(EventData);
+//   } catch (err) {
+//     res.status(500).json(err);
+//   }
+// });
 
 module.exports = router;
