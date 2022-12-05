@@ -59,7 +59,10 @@ router.get("/profile", withAuth, async (req, res) => {
       logged_in: true,
     });
   } catch (err) {
-    res.status(500).json(err);
+    console.log("PROFILE > error rendering profile page:", err);
+    res.render("errorpage", {
+      error: err?.message ?? err.toString(), // {}
+    });
   }
 });
 router.get("/login", (req, res) => {
