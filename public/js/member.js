@@ -8,7 +8,6 @@ const newFormHandler = async (event) => {
   const edate = document.querySelector("#event-date").value.trim();
   const etime = document.querySelector("#event-time").value.trim();
 
-
   if (name && elocation && description && etime && edate) {
     const response = await fetch(`/api/event`, {
       method: "POST",
@@ -21,7 +20,7 @@ const newFormHandler = async (event) => {
     });
 
     if (response.ok) {
-      document.location.replace("/profile");
+      document.location.replace("/member");
     } else {
       alert("Failed to create project");
     }
@@ -37,7 +36,7 @@ const delButtonHandler = async (event) => {
     });
 
     if (response.ok) {
-      document.location.replace("/profile");
+      document.location.replace("/member");
     } else {
       alert("Failed to remove event");
     }
