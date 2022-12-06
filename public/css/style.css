@@ -3,6 +3,20 @@
   padding: 0;
   margin: 0;
 }
+
+.modeldata {
+  padding-bottom: 10px;
+}
+
+.title {
+  text-decoration: underline;
+  padding-bottom: 2.5px;
+}
+
+.cards {
+  padding-left: 40px;
+}
+
 body {
   background-color: aquamarine;
 }
@@ -24,7 +38,7 @@ h2 {
   text-align: left;
   font-style: oblique;
   font-size: xx-large;
-  font-family: fantasy;
+  font-family: copperhead;
   color: rgb(0, 0, 0);
 }
 .header {
@@ -38,33 +52,32 @@ h2 {
   background-color: skyblue;
 }
 a {
-  display: none;
+  
 }
 .form-group {
   text-align: left;
-  justify-content: center;
+  /* justify-content: center; */
   height: 70%;
-  flex-direction: column;
+  /* flex-direction: column; */
   border-width: 1.3rem;
   border-radius: 30px;
   margin-top: 5px;
   font-size: 100%;
-  margin-left: 5px;
+  /* margin-left: 5px; */
   width: 220px;
   height: 65px;
 }
 .form-group {
   border-radius: 30px;
   margin-right: 10px;
-  text-align: justify;
-  padding-left: 70px;
+  padding-left: 40px;
 }
 h3 {
   padding-left: 40px;
   font-style: normal;
   font-weight: 600;
   font-size: xx-large;
-  font-family: fantasy;
+  font-family: copperhead;
 }
 .form-input {
   font-size: larger;
@@ -78,7 +91,7 @@ h3 {
   height: 50px;
   width: 100px;
   border-color: rgb(0, 0, 6);
-  background-color: transparent;
+  background-color: rgb(178, 178, 178);
   border-radius: 10px;
   margin-top: 10px;
 }

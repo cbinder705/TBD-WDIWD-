@@ -1,4 +1,6 @@
-<header> Current Events in Your Area!</header>
+<script>
+    document.write('<a href="' + document.referrer + '">Go Back</a>');
+</script>
 {{#each events as |event|}}
 
 <div class="cards">
@@ -6,11 +8,15 @@
   <h2>
   {{name}}
   </h2>
-  <p>{{description}}</p>
-  <p>{{formatted_date date}}</p>
-  <p>{{ formatted_time time}}</p>
-   <p>{{location}}</p>
-<p>Organized by {{user.name}}</p>
+  <p class="title">Event Description:</p>
+  <p class="modeldata">- {{description}}</p>
+  <p class="title">When?:</p>
+  <p class="modeldata">- {{formatted_date date}}</p>
+  <p class="title">What Time?:</p>
+  <p class="modeldata">- {{ formatted_time time}}</p>
+  <p class="title">Where?:</p>
+  <p class="modeldata">- {{location}}</p>
+  <p>Organized by {{user.name}}</p>
   
   </p>
   <p>
