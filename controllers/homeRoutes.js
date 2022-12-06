@@ -32,7 +32,7 @@ router.get("/event/:id", async (req, res) => {
       ],
     });
 
-    const events = EventData.map((event) => event.get({ plain: true }));
+    const events = EventData.map((event) => event.get({ plain: false }));
 
     res.render("event", {
       events,
