@@ -15,6 +15,7 @@ router.post("/", withAuth, async (req, res) => {
   }
 });
 
+ 
 router.get("/attend/:id", async (req, res) => {
   try {
     let result = await doThing();
@@ -42,15 +43,16 @@ router.get("/delete/:id", withAuth, async (req, res) => {
       },
     });
 
-    if (!EventData) {
-      res.status(404).json({ message: "Nothing to delete!" });
-      return;
-    }
 
-    res.status(200).json(EventData);
-  } catch (err) {
-    res.status(500).json(err);
-  }
-});
+//     if (!EventData) {
+//       res.status(404).json({ message: "Nothing to delete!" });
+//       return;
+//     }
+
+//     res.status(200).json(EventData);
+//   } catch (err) {
+//     res.status(500).json(err);
+//   }
+// });
 
 module.exports = router;

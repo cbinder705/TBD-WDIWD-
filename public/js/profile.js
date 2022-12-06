@@ -3,14 +3,18 @@ const newFormHandler = async (event) => {
 
   const name = document.querySelector("#event-name").value.trim();
   const elocation = document.querySelector("#event-location").value.trim();
+
   const description = document.querySelector("#event-description").value.trim();
   const edate = document.querySelector("#event-date").value.trim();
   const etime = document.querySelector("#event-time").value.trim();
 
-  if (name && elocation && description) {
+
+  if (name && elocation && description && etime && edate) {
     const response = await fetch(`/api/event`, {
       method: "POST",
+
       body: JSON.stringify({ name, description, elocation, edate, etime }),
+
       headers: {
         "Content-Type": "application/json",
       },
