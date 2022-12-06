@@ -15,7 +15,6 @@ router.post("/", withAuth, async (req, res) => {
   }
 });
 
- 
 router.get("/attend/:id", async (req, res) => {
   try {
     let result = await doThing();
@@ -34,15 +33,15 @@ router.get("/attend/:id", async (req, res) => {
   */
 });
 // links use GET requests
-router.get("/delete/:id", withAuth, async (req, res) => {
-  try {
-    const EventData = await Event.destroy({
-      where: {
-        id: req.params.id,
-        user_id: req.session.user_id,
-      },
-    });
-
+// router.get("/delete/:id", withAuth, async (req, res) => {
+//   try {
+//     const EventData = await Event.destroy({
+//       where: {
+//         id: req.params.id,
+//         user_id: req.session.user_id,
+//       },
+//     });
+//   }})
 
 //     if (!EventData) {
 //       res.status(404).json({ message: "Nothing to delete!" });
