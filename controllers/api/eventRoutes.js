@@ -15,10 +15,15 @@ router.post("/", withAuth, async (req, res) => {
   }
 });
 
-router.get("/attend/:id", async (req, res) => {
+router.post("/attend/:id", async (req, res) => {
   try {
-    let result = await doThing();
-    console.log(results);
+    let event = await Event.update(
+      { user_id: req.session.user_id },
+      { where: { _id: req.params.id } }
+    );
+    //event.user_id = req.session.user_id;
+    //event.save();
+    console.log(event);
   } catch (err) {
     console.log(err);
   }

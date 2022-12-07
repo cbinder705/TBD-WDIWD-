@@ -31,12 +31,10 @@ const delButtonHandler = async (event) => {
   if (event.target.hasAttribute("data-id")) {
     const id = event.target.getAttribute("data-id");
 
-    const response = await fetch(`/api/event/${id}`, {
-      method: "DELETE",
-    });
+    const response = await fetch(`/api/event/events`);
 
     if (response.ok) {
-      document.location.replace("/member");
+      document.location.replace("/event");
     } else {
       alert("Failed to remove event");
     }
@@ -47,6 +45,6 @@ document
   .querySelector(".new-event-form")
   .addEventListener("submit", newFormHandler);
 
-document
-  .querySelector(".event-list")
-  .addEventListener("click", delButtonHandler);
+document.querySelector("#event-list").addEventListener("click", () => {
+  window.location = "/event/events";
+});
