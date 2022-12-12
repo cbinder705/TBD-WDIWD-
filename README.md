@@ -44,6 +44,8 @@ What Do I Want To Do? uses NodeJs, Handlebars, CSS, Vanilla Javascript, Sequeliz
 
 # Screenshot
 
+![wdiwd-image] (images\deployed ss.png)
+
 # Link to Deployed Application
 
 https://wdiwd-app.herokuapp.com/
